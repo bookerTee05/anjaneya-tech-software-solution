@@ -115,6 +115,34 @@ img {
 
   --fs-heading: 2.5rem;
   --fs-sub-heading: 1.875rem;
+  --fs-nav-item: 1.5rem;
+
+  --fw-bold: 700;
+  --fw-semi-bold: 600;
+  --fw-regural: 400;
+}
+
+.container {
+  width: calc(100% - (2 * 60px));
+  margin-inline: auto;
+  border: 1px solid red;
+}
+
+/* Tab Mod*/
+@media (max-width: 1024px) {
+  .container {
+    width: calc(100% - (2 * 30px));
+    margin-inline: auto;
+    border: 1px solid red;
+  }
+}
+
+@media (max-with: 445px) {
+  .container {
+    width: calc(100% - (2 * 20px));
+    margin-inline: auto;
+    border: 1px solid red;
+  }
 }
 
 /*  Header Section */
