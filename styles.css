@@ -427,6 +427,7 @@ nav > ul > li > a:hover {
   font-size: 16px;
   border: 1px solid var(--primary-color);
   color: var(--neutral-white-color);
+  border-radius: 1rem;
 }
 
 .service > button:hover {
@@ -460,6 +461,122 @@ nav > ul > li > a:hover {
   }
 }
 /* About Us Section */
+.about-us {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.about-us > h1 {
+  font-size: var(--fs-heading);
+  color: var(--primary-text-color);
+  font-weight: var(--fw-bold);
+  padding-top: 2rem;
+}
+
+.about-us-content {
+  /* border: 1px solid; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+
+.about-us-desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.desc-card {
+  border: 1px solid var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.desc-card > h3 {
+  font-size: var(--fs-sub-heading);
+  color: var(--primary-text-color);
+  padding-top: 1rem;
+}
+
+.desc-card > p {
+  font-size: 16px;
+  color: var(--secondary-text-color);
+  padding: 1rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.about-us-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 841px) {
+  .about-us-content {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+
+  .about-us > h1 {
+    text-align: center;
+  }
+}
 /* Booking Section */
+.booking {
+  background: var(--secondary-color);
+  padding: 2rem;
+}
+
+.booking-section {
+  background: var(--neutral-white-color);
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+}
+
+.booking-section-image {
+  padding: 3rem 0;
+}
+
+.booking-section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.booking-section-content > h3 {
+  font-size: var(--fs-sub-heading);
+  text-align: right;
+}
+
+.booking-section-content > h3 > span {
+  display: block;
+}
+
+@media (max-width: 958px) {
+  .booking-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .booking-section-image {
+    padding: 3rem 2rem;
+  }
+}
+
+@media (max-width: 445px) {
+  .booking-section-content > h3 {
+    text-align: center;
+  }
+}
 /* Subscribe Section */
 /* Footer Section */
