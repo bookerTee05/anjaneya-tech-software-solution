@@ -106,6 +106,7 @@ img {
 
 :root {
   --primary-color: #2e52e8;
+  --primary-dark-color: #006acc;
   --secondary-color: #f1f6ff;
   --ternary-color: #263238;
   --neutral-white-color: #fff;
@@ -122,34 +123,342 @@ img {
   --fw-regural: 400;
 }
 
+@media (max-width: 620px) {
+  :root {
+    --fs-heading: 1.875rem;
+    --fs-sub-heading: 1.5rem;
+    --fs-nav-item: 1.5rem;
+  }
+}
+
 .container {
-  width: calc(100% - (2 * 60px));
+  max-width: calc(100% - (2 * 60px));
   margin-inline: auto;
-  border: 1px solid red;
 }
 
 /* Tab Mod*/
 @media (max-width: 1024px) {
   .container {
-    width: calc(100% - (2 * 30px));
+    max-width: calc(100% - (2 * 30px));
     margin-inline: auto;
-    border: 1px solid red;
   }
 }
 
-@media (max-with: 445px) {
+@media (max-with: 784px) {
   .container {
-    width: calc(100% - (2 * 20px));
-    margin-inline: auto;
-    border: 1px solid red;
+    max-width: calc(100% - (2 * 20px));
   }
 }
 
 /*  Header Section */
-/* Main Section */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav > img {
+  padding: 0.5625rem 0;
+}
+
+nav > ul {
+  display: flex;
+  gap: 3.75rem;
+  align-items: center;
+}
+
+.nav-items > li > a {
+  text-decoration: none;
+  font-size: var(--fs-nav-item);
+  color: var(--primary-text-color);
+}
+
+nav > ul > li > a:hover {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.primary-btn {
+  border: none;
+  font-size: var(--fs-nav-item);
+  padding: 0.625rem;
+  border-radius: 0.315rem;
+  background: var(--primary-color);
+  color: var(--neutral-white-color);
+  transition: all 0.52s ease;
+}
+
+.primary-btn:hover {
+  background: var(--primary-dark-color);
+}
+
+.secondary-btn {
+  border: 1px solid var(--primary-color);
+  font-size: var(--fs-nav-item);
+  padding: 0.625rem;
+  border-radius: 0.315rem;
+  background: transparent;
+  color: var(--primary-color);
+  transition: all 0.52s ease;
+}
+
+.secondary-btn:hover {
+  background: var(--primary-dark-color);
+  color: var(--neutral-white-color);
+}
+
+@media (max-width: 1034px) {
+  .nav-items {
+    display: none;
+  }
+}
+
 /* Hero Section */
+
+.hero {
+  background: var(--secondary-color);
+}
+
+.hero-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-content: center;
+  height: 70vh;
+}
+
+.hero-contain {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.hero-contain > h1 {
+  font-size: var(--fs-heading);
+  max-width: 33vw;
+  font-weight: var(--fw-bold);
+}
+
+.hero-contain > h1 > span {
+  color: var(--primary-color);
+}
+
+.hero-contain > p {
+  max-width: 33vw;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--secondary-text-color);
+}
+
+.hero-btn {
+  display: flex;
+  gap: 2rem;
+}
+
+.hero-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1227px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+    height: auto;
+    gap: 2rem;
+  }
+
+  .hero-contain > h1 {
+    max-width: 100vw;
+    padding-top: 2rem;
+  }
+  .hero-contain > p {
+    max-width: 100vw;
+  }
+}
+
+@media (max-width: 620px) {
+  .hero-btn {
+    flex-direction: column;
+  }
+}
+
 /* Client/Brand Section */
+.client {
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.client > h1 {
+  padding-top: 1rem;
+  font-size: var(--fs-heading);
+  color: var(--primary-text-color);
+  font-weight: var(--fw-bold);
+}
+
+.client > p {
+  color: var(--secondary-text-color);
+}
+
+.client-icon {
+  display: inherit;
+  gap: 5rem;
+  padding-bottom: 1rem;
+}
+
+@media (max-width: 1001px) {
+  .client {
+    min-height: auto;
+  }
+
+  .client-icon {
+    gap: 0;
+  }
+}
+
+@media (max-width: 656px) {
+  .client-icon > img {
+    width: 80px;
+  }
+}
+
+@media (max-width: 464px) {
+  .client-icon > img {
+    width: 50px;
+  }
+}
 /* Our Service Section */
+.service-section {
+  background: var(--secondary-color);
+}
+
+.service {
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.service > h1 {
+  font-size: var(--fs-heading);
+  color: var(--primary-text-color);
+  font-weight: var(--fw-bold);
+  text-align: center;
+  padding: 2rem;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 80%;
+  margin-inline: auto;
+  gap: 6rem;
+  margin-bottom: 1rem;
+}
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  border-radius: 1rem;
+  transition: all 0.52s ease;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.service-card:hover {
+  transform: scale(1.1);
+}
+
+.service-card > h3 {
+  font-size: var(--fs-sub-heading);
+  color: var(--primary-text-color);
+  font-weight: var(--fw-bold);
+}
+
+.service-card > p {
+  text-align: center;
+  padding: 0 1rem;
+  font-size: 16px;
+  color: var(--secondary-text-color);
+  font-weight: var(--fw-regural);
+  line-height: 1.5;
+  max-width: 25vw;
+  height: 50px;
+}
+
+.card-icon {
+  background: var(--neutral-white-color);
+  padding: 1rem;
+  border-top-right-radius: 1rem;
+  margin-top: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.service-card > img {
+  border: 1px solid red;
+}
+
+.btn {
+  border: 1px solid var(--primary-color);
+  padding: 1rem;
+  width: 200px;
+  background: var(--neutral-white-color);
+  margin-bottom: 1rem;
+  font-size: 16px;
+}
+
+.btn::after {
+  content: url(assets/arrow_right.svg);
+  margin-left: 1rem;
+}
+
+.service > button {
+  padding: 1rem;
+  width: 300px;
+  background: var(--primary-color);
+  font-size: 16px;
+  border: 1px solid var(--primary-color);
+  color: var(--neutral-white-color);
+}
+
+.service > button:hover {
+  background: transparent;
+  color: var(--primary-color);
+}
+
+@media (max-width: 1323px) {
+  .service-cards {
+    grid-template-columns: repeat(2, 300px);
+    place-content: center;
+    gap: 4rem;
+  }
+
+  .service-card > p {
+    max-width: 35vw;
+    height: auto;
+  }
+}
+
+@media (max-width: 849px) {
+  .service-cards {
+    grid-template-columns: repeat(1, 300px);
+    place-content: center;
+    gap: 4rem;
+  }
+
+  .service-card > p {
+    max-width: 80vw;
+    height: auto;
+  }
+}
 /* About Us Section */
 /* Booking Section */
 /* Subscribe Section */
