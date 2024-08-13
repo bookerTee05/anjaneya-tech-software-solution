@@ -223,7 +223,8 @@ nav > ul > li > a:hover {
   display: grid;
   grid-template-columns: 1fr 1fr;
   place-content: center;
-  height: 70vh;
+  padding: 2rem 0;
+  border: 1px solid red;
 }
 
 .hero-contain {
@@ -277,7 +278,20 @@ nav > ul > li > a:hover {
   }
 }
 
-@media (max-width: 620px) {
+@media (max-width: 613px) {
+  .primary-btn {
+    border: none;
+    font-size: 16px;
+    width: 150px;
+  }
+
+  .secondary-btn {
+    font-size: 16px;
+    width: 150px;
+  }
+}
+
+@media (max-width: 351px) {
   .hero-btn {
     flex-direction: column;
   }
@@ -302,7 +316,6 @@ nav > ul > li > a:hover {
 
 .client > p {
   color: var(--secondary-text-color);
-  text-align: center;
 }
 
 .client-icon {
@@ -414,6 +427,7 @@ nav > ul > li > a:hover {
   background: var(--neutral-white-color);
   margin-bottom: 1rem;
   font-size: 16px;
+  color: var(--neutral-black-color);
 }
 
 .btn::after {
@@ -459,6 +473,26 @@ nav > ul > li > a:hover {
   .service-card > p {
     max-width: 80vw;
     height: auto;
+  }
+}
+
+@media (max-width: 613px) {
+  .btn {
+    border: 1px solid var(--primary-color);
+    padding: 0.5rem;
+    width: 150px;
+    background: var(--neutral-white-color);
+    margin-bottom: 1rem;
+    font-size: 16px;
+  }
+
+  .btn::after {
+    margin-left: 0.5rem;
+  }
+
+  .service > button {
+    padding: 0.5rem;
+    width: 200px;
   }
 }
 /* About Us Section */
@@ -552,6 +586,7 @@ nav > ul > li > a:hover {
 .booking-section-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
   padding: 1rem;
 }
@@ -572,12 +607,76 @@ nav > ul > li > a:hover {
   .booking-section-image {
     padding: 3rem 2rem;
   }
-}
-
-@media (max-width: 445px) {
   .booking-section-content > h3 {
     text-align: center;
   }
 }
+
+@media (max-width: 445px) {
+  .booking-section-content > h1 {
+    text-align: center;
+  }
+}
 /* Subscribe Section */
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.subscribe > h1 {
+  font-size: var(--fs-heading);
+  color: var(--primary-text-color);
+  padding: 1rem 0;
+}
+
+.subscribe > p {
+  color: var(--secondary-text-color);
+  text-align: center;
+}
+
+.subscribe > form {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.subscribe > form > input {
+  padding: 1rem;
+  width: 400px;
+  border-radius: 1rem;
+}
+
+.subscribe > form > button {
+  width: 200px;
+}
+
+@media (max-width: 714px) {
+  .subscribe {
+    gap: 1rem;
+  }
+  .subscribe > form {
+    flex-direction: column;
+  }
+
+  .subscribe > h1 {
+    padding: 0.5rem 0;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .subscribe > form > input {
+    width: 300px;
+  }
+}
+
+@media (max-width: 377px) {
+  .subscribe > form > input {
+    width: 200px;
+  }
+}
 /* Footer Section */
