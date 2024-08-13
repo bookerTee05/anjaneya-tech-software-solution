@@ -224,7 +224,6 @@ nav > ul > li > a:hover {
   grid-template-columns: 1fr 1fr;
   place-content: center;
   padding: 2rem 0;
-  border: 1px solid red;
 }
 
 .hero-contain {
