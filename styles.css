@@ -368,6 +368,7 @@ nav > ul > li > a:hover {
 
 .client > p {
   color: var(--secondary-text-color);
+  text-align: center;
 }
 
 .client-icon {
@@ -394,7 +395,13 @@ nav > ul > li > a:hover {
 
 @media (max-width: 464px) {
   .client-icon > img {
-    width: 50px;
+    width: 60px;
+  }
+}
+
+@media (max-width: 346px) {
+  .client-icon > img {
+    width: 40px;
   }
 }
 /* Our Service Section */
