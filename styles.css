@@ -529,6 +529,11 @@ footer {
 }
 
 
+.link > ul > li > a:hover {
+  color: var(--primary-dark-color);
+}
+
+
 /* Mobile devices (portrait) */
 @media (max-width: 480px) {
     body {
