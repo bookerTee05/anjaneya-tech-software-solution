@@ -11,12 +11,12 @@ function toggleButtons() {
 
 button_open.addEventListener("click", () => {
   toggleButtons();
-  nav_menu[0].classList.toggle("active");
+  nav_menu[0].classList.add("active");  // Show menu when opening
 });
 
 button_close.addEventListener("click", () => {
   toggleButtons();
-  nav_menu[0].classList.toggle("active");
+  nav_menu[0].classList.remove("active");  // Hide menu when closing
 });
 
 // Fade
